@@ -1,17 +1,37 @@
 # cc-context
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Python 3.10+](https://img.shields.io/badge/Python-3.10+-green.svg)](https://python.org)
+**English** | [中文](README_CN.md)
 
 A CLI toolkit for Claude Code context engineering — monitor token usage, save context snapshots, and detect session anti-patterns.
 
-## Features
+**No dependencies.** Python stdlib only.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10+-yellow?style=for-the-badge)](https://python.org)
+
+---
+
+![cc-context demo](docs/screenshots/demo.png)
+
+---
+
+## What can cc-context do?
 
 | Feature | Description |
 |---------|-------------|
 | **Token Monitor** | Parse `.jsonl` session files, show token consumption by tool type, cache hit rates, cost estimates |
 | **Context Snapshot** | Save context snapshot (modified files, tool stats, token summary) to markdown |
 | **Health Check** | Detect anti-patterns: repeated searches, oversized reads, too many turns |
+
+## Install
+
+```bash
+git clone https://github.com/zengtianli/cc-context.git
+cd cc-context
+python3 context.py monitor
+```
+
+Requirements: Python 3.10+ (stdlib only, no pip dependencies).
 
 ## Quick Start
 
@@ -63,10 +83,6 @@ Supports pricing for:
 - `claude-haiku-4-5` — $0.80/$4 per 1M input/output tokens
 
 Cache read/write pricing included.
-
-## Requirements
-
-- Python 3.10+ (stdlib only, no dependencies)
 
 ## License
 
